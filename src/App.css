@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+header {
+  background-color: aqua;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 15px 30px;
+  width: 100%;
+  position: fixed;
+  top: 0; /* stick to top */
+  left: 0;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Footer */
+footer {
+  position: relative;
+  
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
 }
 
-.card {
-  padding: 2em;
+.footerLogo {
+  background-color: gray;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+/* Navigation */
+.headerNav {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.subNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 5px;
+}
+
+.navCategories {
+  display: flex;
+  gap: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px; /* leave space for fixed header */
+  margin-bottom: 60px; /* leave space for fixed footer */
+  padding: 20px;
+  min-height: calc(100vh - 140px); /* responsive height */
+  
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px;
+  flex-wrap: wrap; /* responsive */
+  background-color: ;
+}
+
+.heroText {
+  display: grid;
+  grid-template-rows: 30px 50px 100px;
+  
+  text-align: justify;
+
+  max-width: 300px;
+}
+
+.heroImage>img{
+  right: 0px;
+  height: 200px;
+  width: 200px;
 }

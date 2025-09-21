@@ -1,15 +1,15 @@
 
 import logopic from "../assets/HeaderLogo.png"
-
+import '../App.css'
 const Header=()=>{
     return(
-        <header>
+        <header >
             <div className="logo">
                 <a href="/">
                 <img src={logopic} alt="" />
                 </a>
             </div>
-            <nav>
+            <nav className="headerNav">
                 <a href="/home">Home</a>
                 <a href="/About">About</a>
                 <a href="/Menu">Menu</a>
