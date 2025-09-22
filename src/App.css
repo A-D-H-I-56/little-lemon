@@ -3,6 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+ 
+}
+
+html,body,#root {
+  width: 100%;
+
 }
 
 /* Header */
@@ -14,7 +21,8 @@ header {
   padding: 15px 30px;
   width: 100%;
   position: fixed;
-  top: 0; /* stick to top */
+  top: 0;
+  /* stick to top */
   left: 0;
   z-index: 1000;
 }
@@ -22,7 +30,7 @@ header {
 /* Footer */
 footer {
   position: relative;
-  
+
   left: 0;
   width: 100%;
   background: #f2f2f2;
@@ -71,38 +79,224 @@ a:hover {
   color: darkblue;
 }
 
-/* Main Content */
-main {
-  margin-top: 80px; /* leave space for fixed header */
-  margin-bottom: 60px; /* leave space for fixed footer */
-  padding: 20px;
-  min-height: calc(100vh - 140px); /* responsive height */
-  
-}
 
 /* Hero Section */
 .heroSection {
+  
+  margin: 100px 0px 20px;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 10px;
-  flex-wrap: wrap; /* responsive */
-  background-color: ;
+  padding: 20px 40px 10px 40px;
+  
+  border-radius: 20px;
+  flex-wrap: wrap;
+  /* responsive */
+  background: #495E57;
+
 }
 
 .heroText {
   display: grid;
   grid-template-rows: 30px 50px 100px;
-  
+  color: white;
+
   text-align: justify;
 
   max-width: 300px;
 }
 
-.heroImage>img{
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #F4CE14;
+}
+
+button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  width: max-content;
+
+}
+
+.heroImage>img {
   right: 0px;
   height: 200px;
   width: 200px;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #EDEFEE;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  align-self: center;
+  align-items: center;
+  
+
+
+}
+.featuredTop {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+
+}
+
+.featuredCards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  max-width: 300px;
+  border-radius: 20px;
+  background-color: #e2e9e6;
+  
+  /* responsive */
+  box-sizing: border-box;
+  
+}
+
+.card img {
+
+  border-radius: 15px;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+.card button{
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.cardName-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h5 {
+  color: #F4CE14;
+}
+
+.Reviews{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #EDEFEE;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  align-self: center;
+  align-items: center;
+}
+.reviewCards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+.reviewCard{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 10px;
+  background-color: #e2e9e6;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+.reviewCard img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  align-self: center;
+}
+.reviewer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.About{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px ;
+  
+  background-color: #EDEFEE;
+  margin-bottom: 20px;
+
+}
+.aboutText{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  text-align: justify;
+  padding: 20px;
+
+}
+.aboutImage{
+  
+  position: relative;
+  padding: 10px;
+
+}
+
+.img1{
+  top: 0;
+  left: 0;
+}
+.img2{
+  margin-top: -140px;
+  margin-left: -140px;
+  transform: translate(20px, 20px);
+}
+
+@media (min-width: 768px) {
+  .heroImage>img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .heroText {
+    max-width: 500px;
+  }
 }

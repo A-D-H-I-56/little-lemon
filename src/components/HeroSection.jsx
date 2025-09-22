@@ -1,8 +1,9 @@
 
 import heroImg from "../assets/HeroPic.svg"
+
 const Main=()=>{
     return(
-        <main>
+        
             <section className="heroSection">
                 <div className="heroText">
                 <h2 className="titleText">Little Lemon</h2>
@@ -10,12 +11,14 @@ const Main=()=>{
                 <p>
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     We are commited to provide Best Food and a taste you never forget</p>
+                <button className="reserveTable">Reserve a Table</button>
                 </div>
                 <div className="heroImage">
                     <img src={heroImg} alt="" />
                 </div>
             </section>
-        </main>
+
+      
     )
 }
 export default Main;
