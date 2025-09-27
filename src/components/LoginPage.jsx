@@ -15,7 +15,7 @@ const LoginPage = () => {
     const { login, register } = useAuth();
     const [error, setError] = useState('');
     
-    const redirectTo = searchParams.get('redirect') || '/reservations';
+    const redirectTo = searchParams.get('redirect') || '/';
 
     const handleChange = (e) => {
         setFormData({

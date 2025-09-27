@@ -36,7 +36,7 @@ return(
                     <div className="card">
                         <img src={desert} alt="Salad" />
                         <div className="cardName-price">
-                        <h4>Lemon Desert</h4>
+                        <h4>Lemon Dessert</h4>
                         <h5>$5</h5>
                         </div>
                         
