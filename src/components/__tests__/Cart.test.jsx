@@ -37,6 +37,7 @@ test('renders cart items and updates quantity', () => {
 
   render(<Cart />);
   expect(screen.getByText(/Greek Salad/i)).toBeInTheDocument();
-  fireEvent.click(screen.getByText('+'));
+  const plusButtons = screen.getAllByText('+');
+  fireEvent.click(plusButtons[0]);
   expect(mockUpdateQuantity).toHaveBeenCalled();
 });

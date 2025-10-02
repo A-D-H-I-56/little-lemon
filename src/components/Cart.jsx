@@ -50,18 +50,18 @@ const Cart = () => {
                                     </div>
                                     <div className="cart-item-controls">
                                         <button 
-                                            onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
                                             className="cart-quantity-button"
                                         >-</button>
                                         <span className="cart-quantity-display">
                                             {item.quantity}
                                         </span>
                                         <button 
-                                            onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
                                             className="cart-quantity-button"
                                         >+</button>
                                         <button 
-                                            onClick={() => onRemoveItem(item.id)}
+                                            onClick={() => removeFromCart(item.id)}
                                             className="cart-remove-button"
                                         >Remove</button>
                                     </div>

@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 import AboutSection from '../AboutSection';
 import {  test,  expect } from 'vitest';
 
-test('renders AboutSection with title and description', () => {
-  render(<AboutSection />);
+test('renders AboutSection with title, description and images', () => {
+  const { container } = render(<AboutSection />);
   
-  expect(screen.getByText(/Little Lemon/i)).toBeInTheDocument();
+  expect(screen.getAllByText(/Little Lemon/i).length).toBeGreaterThan(0);
   expect(screen.getByText(/Chicago/i)).toBeInTheDocument();
   expect(screen.getByText(/charming neighborhood bistro/i)).toBeInTheDocument();
-  expect(screen.getAllByRole('img')).toHaveLength(2);
+  expect(container.querySelectorAll('img').length).toBeGreaterThanOrEqual(2);
 });

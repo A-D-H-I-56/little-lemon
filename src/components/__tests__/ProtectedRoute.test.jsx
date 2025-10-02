@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import ProtectedRoute from '../ProtectedRoute';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { MemoryRouter } from 'react-router-dom';
 import { vi, test,  expect } from 'vitest';
-vi.mock('../contexts/AuthContext');
+vi.mock('../../contexts/AuthContext');
 
 test('renders children if user is authenticated', () => {
-  useAuth.mockReturnValue({ user: { name: 'Adnan' } });
+  useAuth.mockReturnValue({ user: { name: 'Adnan' }, isAuthenticated: () => true, isLoading: false });
   render(
     <MemoryRouter>
       <ProtectedRoute><div>Secret Content</div></ProtectedRoute>
@@ -16,7 +16,7 @@ test('renders children if user is authenticated', () => {
 });
 
 test('redirects to login if not authenticated', () => {
-  useAuth.mockReturnValue({ user: null });
+  useAuth.mockReturnValue({ user: null, isAuthenticated: () => false, isLoading: false });
   render(
     <MemoryRouter>
       <ProtectedRoute><div>Secret Content</div></ProtectedRoute>

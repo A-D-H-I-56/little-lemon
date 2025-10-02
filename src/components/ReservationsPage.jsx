@@ -65,7 +65,7 @@ const ReservationsPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!formData.tableType) {
-            alert('Please select a table type!');
+            window.alert('Please select a table type!');
             return;
         }
         // Handle form submission here

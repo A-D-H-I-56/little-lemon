@@ -1,5 +1,5 @@
 
-import reviewer from '../assets/reviewer.jpg'
+import person from '../assets/person.png'
 
 const TestimonialsSection = () => {
     const testimonials = [
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
                         <h5>{testimonial.title}</h5>
                         <p>{testimonial.body}</p>
                         <div className="reviewer">
-                            <img src={reviewer} alt={testimonial.name} />
+                            <img src={person} alt={testimonial.name} />
                             <h4>{testimonial.name}</h4>
                         </div>
                         <p>{testimonial.date}</p>

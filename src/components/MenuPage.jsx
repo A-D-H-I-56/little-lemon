@@ -74,7 +74,9 @@ const MenuPage = () => {
                                 <h5>{item.price}</h5>
                             </div>
                             <p>{item.description}</p>
-                            <button className="orderDelivery">Order Now</button>
+                            <button className="orderDelivery" onClick={()=>{
+                                alert('Ding🔔! Your order is now being prepared');
+                            }}>Order Now</button>
                         </div>
                     ))}
                 </div>
